@@ -23,35 +23,64 @@ app.get("/api/compliment", (req, res) => {
   
 });
 
-app.get("/api/compliment", (req, res) => {
-  const compliments = ["your day will be great!",
-					 "be hopeful!",
-					 "Your the bein deep trouble.",
-           
-  ];
 
-  // choose random compliment
-  let randomIndex = Math.floor(Math.random() * compliments.length);
-  let randomCompliment = compliments[randomIndex];
 
-  res.status(200).send(randomCompliment);
-  
+app.get("/api/fortune", (req, res) => {
+  const fortune = ["You will soon be surrounded by good friends and laughter.", 
+  "You can see a lot just by looking.",
+  "When your heart is pure, your mind is clear.",
+
+];
+
+let randomIndex1 = Math.floor(Math.random() * fortune.length);
+let randomFortune = fortune[randomIndex1];
+
+res.status(200).send(randomFortune);
+
 });
 
+app.get("/api/insult", (req, res) => {
+  const insult = ["Idiot!", 
+  "Dumbass!",
+  "Your mother was a hamster and your father smelt of elderberries!",
 
-// app.get("/api/fortune", (req, res) => {
-//   const fortune = ["You will soon be surrounded by good friends and laughter.", 
-//   "You can see a lot just by looking.",
-//   "When your heart is pure, your mind is clear.",
+];
 
-// ];
+let randomIndex1 = Math.floor(Math.random() * insult.length);
+let randomInsult = insult[randomIndex1];
 
-// let randomIndex1 = Math.floor(Math.random() * fortunes.length);
-// let randomFortune = fortunes[randomIndex1];
+res.status(200).send(randomInsult);
 
-// res.status(200).send(randomFortune);
+});
 
-// });
+app.get("/api/tvshow", (req, res) => {
+  const tvshow = ["It's Always Sunny in Philadelphia", 
+  "The Office",
+  "Ted Lasso",
+
+];
+
+let randomIndex1 = Math.floor(Math.random() * tvshow.length);
+let randomTvShow = tvshow[randomIndex1];
+
+res.status(200).send(randomTvShow);
+
+});
+
+app.get("/api/sport", (req, res) => {
+  const sport = ["Soccer", 
+  "Basketball",
+  "Baseball",
+
+];
+
+let randomIndex1 = Math.floor(Math.random() * sport.length);
+let randomSport = sport[randomIndex1];
+
+res.status(200).send(randomSport);
+
+});
+
 
 
 app.listen(4000, () => console.log("Server running on 4000"));
